@@ -3,7 +3,7 @@ title: Test event
 location: 2 Brattle Square
 city: Cambridge
 state: MA
-date: 12/27/2017
+date: 2017-12-27T00:00:00-05:00
 summary: This is the brief summary.
 contact: lehler@ucsusa.org
 website: 'https://www.ucsusa.org'
