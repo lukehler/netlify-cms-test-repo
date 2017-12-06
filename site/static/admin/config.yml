@@ -15,6 +15,24 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "event"       # Used in routes, e.g., /admin/collections/:slug/edit
+    label: "Event"      # Used in the UI, e.g., "New Post"
+    folder: "site/content/events"   # The path to the folder where the documents are stored
+    create: true        # Allow users to create new documents in this collection
+    fields:             # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1", required: true}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "City", name: "city", widget: "string"}
+      - label: "State"
+        name: "state"
+        widget: "string"
+        required: true
+        options: ['Online', 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+      - {label: "Event Date", name: "date", widget: "datetime", required: true}
+      - {label: "Summary", name: "summary", widget: "markdown"}
+      - {label: "Contact", name: "contact", widget: "string"}
+      - {label: "Website", name: "website", widget: "string"}
+      - {label: "Full text", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     files:
